@@ -1,10 +1,9 @@
-
 require("dotenv").config();
 
 module.exports = {
-    host : 'localhost',
-    user : 'root',
+    host : '118.67.133.207',
+    user : 'ecofit',
     password : process.env.MYSQL_PASSWORD,
-    database : 'echo_fit',
+    database : 'echo',
     port : '3306'
 };

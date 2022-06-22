@@ -13,7 +13,7 @@ module.exports = app => {
         console.log("hello world")
     });
 
-    router.get('/users', (req, res) => {
+    router.get('/test', (req, res) => {
         connection.query('SELECT * from test', (error, rows) => {
             if (error) {
                 throw error;
