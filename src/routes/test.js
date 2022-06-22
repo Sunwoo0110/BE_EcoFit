@@ -1,8 +1,8 @@
 const config = require('../config/config');
 const mysql = require('mysql');
-const connection = mysql.createConnection(config);
 
 module.exports = app => {
+    const connection = mysql.createConnection(config);
 
     connection.connect();
 
@@ -22,6 +22,8 @@ module.exports = app => {
             res.send(rows);
         });
     });
+
+    // connection.end();
 
     app.use("/api/test", router);
 }
