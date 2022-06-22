@@ -13,6 +13,7 @@ app.use(cors(corsOptions));
 // app.use(bodyParser.urlencoded({ extended: true }));
 
 require('./routes/test')(app);
+require('./routes/habit')(app);
 
 const PORT = 3000;
 app.listen(PORT, () => {
