@@ -1,1 +1,1 @@
-BE Echo Fit
+BE about Eco Fit Project
