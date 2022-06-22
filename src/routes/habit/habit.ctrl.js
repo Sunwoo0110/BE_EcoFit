@@ -12,8 +12,9 @@ exports.get_root = async (req,res) => {
         });
 };
 
+// /add/:title
 exports.get_add_title = async (req,res) => {
-        db.query('INSERT INTO habit(title, count) VALUES ("예시", 0)', (error, rows) => {
+        db.query(`INSERT INTO habit(title, count) VALUES ("${req.params.title}", 0)`, (error, rows) => {
            if (error) {
                res.send("fail");
                throw error;
@@ -23,10 +24,9 @@ exports.get_add_title = async (req,res) => {
        });
 };
 
+// /click/:title
 exports.get_click_title = async (req,res) => {
-        //connection.query('UPDATE habit SET count = count + 1 WHERE title = req.params.title')
-        console.log(type(res.params))
-        db.query('UPDATE habit SET count = count + 1 WHERE title = "sdf"', (error, rows) => {
+        db.query(`UPDATE habit SET count = count + 1 WHERE title = "${req.params.title}"`, (error, rows) => {
             if (error) {
                 res.send("fail");
                 throw error;
