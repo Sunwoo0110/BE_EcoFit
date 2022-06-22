@@ -21,11 +21,6 @@ class App {
 
     }
 
-    // dbConnection() {
-    //     // DB authentication
-    //     require('./routes');
-    //   }
-
     getRouting() {
         this.app.use(require("./routes"));
     }
