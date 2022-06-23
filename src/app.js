@@ -1,5 +1,4 @@
 const express = require("express");
-const bodyParser = require("body-parser");
 const swaggerUi = require('swagger-ui-express');
 const swaggerFile = require("../swagger-output.json");
 
@@ -23,6 +22,7 @@ const swaggerFile = require("../swagger-output.json");
 
 class App {
     constructor() {
+        
         this.app = express();
 
         this.middleware();
