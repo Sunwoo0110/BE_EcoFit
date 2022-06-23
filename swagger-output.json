@@ -87,12 +87,12 @@
         }
       }
     },
-    "/maket/": {
+    "/market/": {
       "get": {
         "tags": [
-          "maket"
+          "market"
         ],
-        "description": "maket 임시",
+        "description": "market 임시",
         "parameters": [],
         "responses": {
           "200": {

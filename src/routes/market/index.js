@@ -3,11 +3,11 @@ const router = require('express').Router();
 
 router.get('/', (req, res) => {
     /*
-        #swagger.tags = ['User']
-        #swagger.description = '임시'
+        #swagger.tags = ['market']
+        #swagger.description = 'market 임시'
     */
 
-    res.send('Hello, User');
+    res.send('Hello, market');
 });
 
 module.exports = router;
