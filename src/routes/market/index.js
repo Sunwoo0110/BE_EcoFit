@@ -24,7 +24,7 @@ const upload = multer({
 router.get("/", ctrl.get_market);
 router.get('/data/image', ctrl.get_img_market);
 
-// Post
-router.post("/add/:name/:price/:explanation/:hashtag", upload.single('img'), ctrl.post_add_market);
+//post
+router.post("/add", upload.single('img'), ctrl.post_add_market);
 
 module.exports = router;

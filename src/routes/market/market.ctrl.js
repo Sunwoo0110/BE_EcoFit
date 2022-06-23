@@ -1,3 +1,4 @@
+const { Console } = require("console");
 const db = require("../db")
 
 
@@ -25,10 +26,8 @@ exports.post_add_market = (req, res) => {
         #swagger.parameters['hashTag'] = { description: 'hashTag' }
         #swagger.parameters['image'] = { description: 'imge파일' }
     */
-   console.log(req.file.path)
-   
     db.query(
-        `INSERT INTO Market (name, price, explanation, hashTag, image) VALUES ("${req.params.name}", ${req.params.price}, "${req.params.explanation}", "${req.params.hashtag}", "${req.file.path}");`, 
+        `INSERT INTO Market (name, price, explanation, hashTag, image) VALUES ("${req.body.name}", ${req.body.price}, "${req.body.explanation}", "${req.body.hashtag}", "${req.file.path}");`, 
             (error, rows) => {
         if (error) {
             throw error;

@@ -47,9 +47,11 @@ class App {
     }
     
     bodyParsing() {
-        this.app.use(bodyParser.json());
-        this.app.use(bodyParser.urlencoded({ extended: true }));
-        
+        // var multer = require('multer');
+        // var forms = multer();
+        this.app.use(express.json());
+        this.app.use(express.urlencoded({ extended: true }));
+        // this.app.use(forms.array());
     }
 
     getRouting() {
