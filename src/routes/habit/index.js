@@ -7,7 +7,7 @@ const ctrl = require("./habit.ctrl");
 router.get("/", ctrl.get_habit);
 
 //Put
-router.put("/add/:title", ctrl.put_add_habit);
+router.put("/add/:num/:newtitle", ctrl.put_add_habit);
 router.put("/click/:title", ctrl.put_click_title);
 
 

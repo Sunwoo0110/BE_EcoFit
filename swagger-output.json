@@ -87,21 +87,30 @@
         }
       }
     },
-    "/habit/add/{title}": {
+    "/habit/add/{num}/{newtitle}": {
       "put": {
         "tags": [
           "Habit"
         ],
-        "description": "습관을 추가해주는 API입니다. 매개변수 title을 입력하여, 습관을 추가할수 있습니다.",
+        "description": "습관을 변경해주는 API입니다. 매개변수 title을 입력하여, 습관을 변경할수 있습니다.",
         "parameters": [
           {
-            "name": "title",
+            "name": "num",
             "in": "path",
             "required": true,
             "schema": {
               "type": "string"
             },
-            "description": "습관을 추가하기 위해 필요한 PK"
+            "description": "습관을 변경하기 위해 필요한 PK"
+          },
+          {
+            "name": "newtitle",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "습관을 변경하기 위해 필요한 PK"
           }
         ],
         "responses": {
