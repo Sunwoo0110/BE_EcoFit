@@ -9,7 +9,7 @@ const connection = mysql.createConnection(config);
 
 try {
     connection.connect();
-    console.log("DB connection is sucessfull")
+    console.log("[server] DB connection is sucessfull")
 } catch (e) {
     console.error(e);
 }

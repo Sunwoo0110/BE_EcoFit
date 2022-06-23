@@ -1,6 +1,4 @@
-// const config = require('../config/config');
-// const mysql = require('mysql');
-const router = require('express').Router();
+const router = require("express").Router();
 
 const db = require('../db');
 

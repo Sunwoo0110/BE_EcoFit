@@ -1,5 +1,5 @@
-const { Router } = require("express");
-const router = Router();
+const router = require("express").Router();
+
 
 router.use("/", require("./root"));
 router.use("/users", require("./users"))

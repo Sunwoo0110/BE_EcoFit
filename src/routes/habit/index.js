@@ -1,9 +1,10 @@
-const { Router } = require("express");
-const router = Router();
+const router = require("express").Router();
 const ctrl = require("./habit.ctrl");
 
+
 router.get("/", ctrl.get_root);
-router.get("/add/:title", ctrl.get_add_title);
-router.get("/click/:title", ctrl.get_click_title);
+router.put("/add/:title", ctrl.put_add_title);
+router.put("/click/:title", ctrl.put_click_title);
+
 
 module.exports = router;
