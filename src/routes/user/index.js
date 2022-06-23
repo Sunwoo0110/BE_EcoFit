@@ -1,6 +1,5 @@
-const express = require('express');
-
-const router = express.Router();
+const router = require('express').Router();
+// const ctrl = require("./habit.ctrl");
 
 router.get('/', (req, res) => {
     /*
