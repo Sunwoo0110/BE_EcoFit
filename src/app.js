@@ -3,6 +3,7 @@ const swaggerUi = require('swagger-ui-express');
 const swaggerFile = require("../swagger-output.json");
 
 /* TODO
+    url에 api 붙이기
     추가 api 
     포인트 받기 -> 반환값 (count 올리기, 포인트 올리기 4p) db 수정
 
