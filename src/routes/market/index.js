@@ -2,9 +2,15 @@ const router = require('express').Router();
 const ctrl = require("./market.ctrl");
 
 const multer  = require('multer')
-const upload = multer({ 
-    dest: __dirname+'/uploads/', // 이미지 업로드 경로
-}) 
+const storage = multer.diskStorage({
+    destination: (req,file,cb) => {
+        cb(null, __dirname+'/uploads/');
+    }, // 이미지 업로드 경로
+    filename: (req,file,cb) => {
+        cb(null , file.originalname);
+    }
+})
+const upload = multer({ storage: storage}) 
 
 /*
     [마켓]
