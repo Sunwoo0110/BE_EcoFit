@@ -11,31 +11,12 @@
     }
   ],
   "paths": {
-    "/": {
+    "challenge/": {
       "get": {
-        "description": "",
-        "parameters": [],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/users/": {
-      "get": {
-        "description": "",
-        "parameters": [],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/test/": {
-      "get": {
-        "description": "",
+        "tags": [
+          "challenge"
+        ],
+        "description": "challenge 임시",
         "parameters": [],
         "responses": {
           "200": {
@@ -49,7 +30,7 @@
         "tags": [
           "habit"
         ],
-        "description": "",
+        "description": "습관을 조회하는 기초 API, 테스트용도",
         "parameters": [],
         "responses": {
           "200": {
@@ -87,7 +68,7 @@
         "tags": [
           "habit"
         ],
-        "description": "",
+        "description": "습관을 클릭하면, count를 올려주는 API",
         "parameters": [
           {
             "name": "title",
@@ -95,9 +76,38 @@
             "required": true,
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "클릭할때마다 1씩 증가"
           }
         ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/maket/": {
+      "get": {
+        "tags": [
+          "maket"
+        ],
+        "description": "maket 임시",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/user/": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "description": "임시",
+        "parameters": [],
         "responses": {
           "200": {
             "description": "OK"

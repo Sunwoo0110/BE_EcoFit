@@ -15,7 +15,7 @@ const options = {
         },
     ],
     schemes: ['http'],
-  };
+};
 
 const outputFile = './swagger-output.json';
 const endpointsFiles = ['./src/routes/index.js'];

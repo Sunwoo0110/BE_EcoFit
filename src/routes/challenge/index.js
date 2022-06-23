@@ -1,9 +1,12 @@
-const { Router } = require("express");
-const router = Router();
+/* Challenge APIs */
+const router = require("express").Router();
 const ctrl = require("./challenge.ctrl");
 
+// Get
 router.get("/", ctrl.get_root);
-router.get("/add/:title", ctrl.get_add_title);
-router.get("/click/:title", ctrl.get_click_title);
+router.get("add/:title", ctrl.get_click_title);
+
+//Put
+router.put("/click", ctrl.put_join);
 
 module.exports = router;
