@@ -43,7 +43,7 @@ exports.put_click_title = (req, res) => {
         #swagger.parameters['title'] = { description: '습관을 검색하기 위해 필요한 PK' }
     */
     console.log(req.params)
-    // change Habit count, habit
+    // change Habit count, point
     db.query(`UPDATE Habit SET count = count + 1, point = point +4 WHERE title = "${req.params.title}"`, (error, rows) => {
         if (error) {
             res.send("fail");

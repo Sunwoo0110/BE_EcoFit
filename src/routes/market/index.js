@@ -1,6 +1,6 @@
+
 const router = require('express').Router();
 const ctrl = require("./market.ctrl");
-
 
 const multer  = require('multer')
 const upload = multer({ 
