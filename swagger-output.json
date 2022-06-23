@@ -13,16 +13,49 @@
   "paths": {
     "challenge/": {
       "get": {
-        "tags": [
-          "challenge"
-        ],
-        "description": "challenge 임시",
+        "description": "",
         "parameters": [],
         "responses": {
           "200": {
             "description": "OK"
           }
         }
+      }
+    },
+    "challengeadd/{title}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "title",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "challenge/click/{title}": {
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "title",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {}
       }
     },
     "/habit/": {
@@ -87,12 +120,12 @@
         }
       }
     },
-    "/maket/": {
+    "/market/": {
       "get": {
         "tags": [
-          "maket"
+          "market"
         ],
-        "description": "maket 임시",
+        "description": "market 임시",
         "parameters": [],
         "responses": {
           "200": {
