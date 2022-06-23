@@ -43,6 +43,8 @@ class App {
 
     middleware() {
         this.app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerFile));
+        this.app.use('/static', express.static(__dirname+'/routes/market/uploads'));
+        this.app.use('/static', express.static(__dirname+'/routes/challenge/uploads'));
     }
     
     bodyParsing() {
