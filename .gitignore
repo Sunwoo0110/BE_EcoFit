@@ -144,7 +144,7 @@ dist
 .env
 .DS_Store
 
-routes/market/upload/
+src/routes/market/upload/
 temp/
 
 # End of https://www.toptal.com/developers/gitignore/api/node
