@@ -23,7 +23,7 @@ exports.put_add_habit = (req,res) => {
         #swagger.tags = ['Habit']
         #swagger.description = '습관을 변경해주는 API입니다. 매개변수 title을 입력하여, 습관을 변경할수 있습니다.'
         #swagger.parameters['newtitle'] = { description: '습관을 변경하기 위해 필요한 PK' }
-        #swagger.parameters['oldtitle'] = { description: '습관을 변경하기 위해 필요한 PK' }
+        #swagger.parameters['num'] = { description: '습관을 변경하기 위해 필요한 PK' }
         
     */
     // db.query(`INSERT INTO Habit(title, id, point, count) VALUES ("${req.params.title}", "해커톤", 0, 0)`, (error, rows) => {
@@ -34,7 +34,7 @@ exports.put_add_habit = (req,res) => {
     //     res.send("success");
     //     console.log(rows);
     // });
-    db.query(`UPDATE Habit SET title = "${req.params.newtitle}" WHERE title = "${req.params.oldtitle}"`, (error, rows) => {
+    db.query(`UPDATE Habit SET title = "${req.params.newtitle}" WHERE num = "${req.params.num}"`, (error, rows) => {
         if (error) {
             res.send("fail");
             throw error;
