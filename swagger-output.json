@@ -67,12 +67,11 @@
           },
           {
             "name": "body",
-            "in": "body",
-            "required": true,
+            "description": "test",
+            "in": "query",
             "schema": {
-              "type": "object"
-            },
-            "description": "test"
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -186,29 +185,11 @@
             "in": "query",
             "schema": {
               "type": "string"
-            },
-            "description": "가격"
+            }
           },
           {
             "name": "explanation",
             "description": "상품설명",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            },
-            "description": "상품설명"
-          },
-          {
-            "name": "hashTag",
-            "description": "hashTag",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "image",
-            "description": "imge파일",
             "in": "query",
             "schema": {
               "type": "string"
@@ -234,20 +215,6 @@
         "responses": {
           "200": {
             "description": "OK"
-          }
-        },
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "data": {
-                    "example": "any"
-                  }
-                }
-              }
-            }
           }
         }
       }

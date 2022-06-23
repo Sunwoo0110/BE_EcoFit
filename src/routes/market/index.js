@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-const router = require('express').Router();
-const ctrl = require("./market.ctrl");
-
-=======
 
 const router = require('express').Router();
 const ctrl = require("./market.ctrl");
->>>>>>> d59cd82ca98959b40e847333dc3025038c528863
 
 const multer  = require('multer')
 const upload = multer({ 

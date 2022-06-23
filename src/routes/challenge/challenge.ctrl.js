@@ -26,7 +26,7 @@ exports.get_click_title = (req,res) => {
     */
     console.log(req.params)
     // send image json  
-    db.query(`SELECT image from Challenge where title = "${req.params.title}"`, (error, rows) => {
+    db.query(`SELECT count, image from Challenge where title = "${req.params.title}"`, (error, rows) => {
         if (error) {
             throw error;
         }
