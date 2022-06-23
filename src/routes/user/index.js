@@ -3,7 +3,7 @@ const router = require('express').Router();
 
 router.get('/', (req, res) => {
     /*
-        #swagger.tags = ['User']
+        #swagger.tags = ['user']
         #swagger.description = '임시'
     */
 

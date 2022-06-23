@@ -45,7 +45,7 @@ exports.put_join = (req,res) => {
     */
     console.log(req.body)
     // update challenge count and image list
-    db.query(`UPDATE Challenge SET count = count + 1, image = JSON_ARRAY_APPEND(image, '$',"${req.body.image}") WHERE title = "${req.params.title}"`, (error, rows) => {
+    db.query(`UPDATE Challenge SET count = count + 1, image = JSON_ARRAY_APPEND(image, '$', "${req.body.image}") WHERE title = "${req.params.title}"`, (error, rows) => {
         if (error) {
             res.send("fail");
             throw error;
