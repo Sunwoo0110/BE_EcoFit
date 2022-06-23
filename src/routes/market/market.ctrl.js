@@ -1,4 +1,3 @@
-const { Console } = require("console");
 const db = require("../db")
 
 
@@ -43,6 +42,11 @@ exports.post_add_market = (req, res) => {
 // 임시 API 향후 기능에 따라 변경 (예시)
 exports.get_img_market = (req,res,next) => {
 
+     /*
+        #swagger.tags = ['Market']
+        #swagger.description = '임시로 그림 불러오는 API'
+    */
+    
     // local의 파일을 불러오기위한 Module 여기서만 사용되니 local로 선언
     const fs = require('fs');
 
