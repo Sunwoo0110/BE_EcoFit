@@ -47,28 +47,6 @@
             "description": "OK"
           }
         }
-      },
-      "put": {
-        "tags": [
-          "challenge"
-        ],
-        "description": "챌린지 인증을 추가하는 API입니다. 매개변수 title을 입력하여, 챌린지를 참여할 수 있습니다.",
-        "parameters": [
-          {
-            "name": "title",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            },
-            "description": "test"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
       }
     },
     "/challenge/add/{title}": {
@@ -233,12 +211,26 @@
         }
       }
     },
-    "/user/": {
+    "/user/point": {
       "get": {
         "tags": [
-          "user"
+          "User"
         ],
-        "description": "임시",
+        "description": "사용자 이름과 포인트 조회",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/user/list": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "description": "사용자 참여 챌린지 조회",
         "parameters": [],
         "responses": {
           "200": {

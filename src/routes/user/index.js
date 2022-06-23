@@ -1,13 +1,8 @@
 const router = require('express').Router();
-// const ctrl = require("./habit.ctrl");
+const ctrl = require("./user.ctrl");
 
-router.get('/', (req, res) => {
-    /*
-        #swagger.tags = ['user']
-        #swagger.description = '임시'
-    */
-
-    res.send('Hello, User');
-});
+// GET
+router.get("/point", ctrl.get_user_point);
+router.get("/list", ctrl.get_challenged_list);
 
 module.exports = router;
