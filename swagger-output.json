@@ -165,7 +165,7 @@
         "responses": {}
       }
     },
-    "/market/add/{name}/{price}/{explanation}/{hashtag}": {
+    "/market/add": {
       "post": {
         "tags": [
           "Market"
@@ -174,17 +174,16 @@
         "parameters": [
           {
             "name": "name",
-            "in": "path",
-            "required": true,
+            "description": "상품 검색을 위해 필요한 PK",
+            "in": "query",
             "schema": {
               "type": "string"
-            },
-            "description": "상품 검색을 위해 필요한 PK"
+            }
           },
           {
             "name": "price",
-            "in": "path",
-            "required": true,
+            "description": "가격",
+            "in": "query",
             "schema": {
               "type": "string"
             },
@@ -192,17 +191,25 @@
           },
           {
             "name": "explanation",
-            "in": "path",
-            "required": true,
+            "description": "상품설명",
+            "in": "query",
             "schema": {
               "type": "string"
             },
             "description": "상품설명"
           },
           {
-            "name": "hashtag",
-            "in": "path",
-            "required": true,
+            "name": "hashTag",
+            "description": "hashTag",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "image",
+            "description": "imge파일",
+            "in": "query",
             "schema": {
               "type": "string"
             }
@@ -227,6 +234,20 @@
         "responses": {
           "200": {
             "description": "OK"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "data": {
+                    "example": "any"
+                  }
+                }
+              }
+            }
           }
         }
       }
