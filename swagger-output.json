@@ -214,12 +214,26 @@
         }
       }
     },
-    "/user/": {
+    "/user/point": {
       "get": {
         "tags": [
-          "user"
+          "User"
         ],
-        "description": "임시",
+        "description": "사용자 이름과 포인트 조회",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/user/list": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "description": "사용자 참여 챌린지 조회",
         "parameters": [],
         "responses": {
           "200": {
