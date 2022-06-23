@@ -4,9 +4,9 @@ const ctrl = require("./challenge.ctrl");
 
 // Get
 router.get("/", ctrl.get_root);
-router.get("add/:title", ctrl.get_click_title);
+router.get("/add/:title", ctrl.get_click_title);
 
-//Put
+// Put
 router.put("/click/:title", ctrl.put_join);
 
 module.exports = router;

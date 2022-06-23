@@ -11,9 +11,12 @@
     }
   ],
   "paths": {
-    "challenge/": {
+    "/challenge/": {
       "get": {
-        "description": "",
+        "tags": [
+          "challenge"
+        ],
+        "description": "챌린지를 조회하는 기초 API, 테스트용도",
         "parameters": [],
         "responses": {
           "200": {
@@ -22,9 +25,12 @@
         }
       }
     },
-    "challengeadd/{title}": {
+    "/challenge/add/{title}": {
       "get": {
-        "description": "",
+        "tags": [
+          "challenge"
+        ],
+        "description": "선택된 챌린지의 인증 사진들을 반환하는 API입니다. 매개변수 title을 입력하여, 인증 사진을 받을 수 있습니다.",
         "parameters": [
           {
             "name": "title",
@@ -32,7 +38,8 @@
             "required": true,
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "test"
           }
         ],
         "responses": {
@@ -42,9 +49,12 @@
         }
       }
     },
-    "challenge/click/{title}": {
+    "/challenge/click/{title}": {
       "put": {
-        "description": "",
+        "tags": [
+          "challenge"
+        ],
+        "description": "챌린지 인증을 추가하는 API입니다. 매개변수 title을 입력하여, 챌린지를 참여할 수 있습니다.",
         "parameters": [
           {
             "name": "title",
@@ -52,10 +62,15 @@
             "required": true,
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "test"
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       }
     },
     "/habit/": {

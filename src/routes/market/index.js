@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
         #swagger.description = 'market 임시'
     */
 
-    res.send('Hello, maket');
+    res.send('Hello, market');
 });
 
 module.exports = router;

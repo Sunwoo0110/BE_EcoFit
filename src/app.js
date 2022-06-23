@@ -1,6 +1,7 @@
 const express = require("express");
 const swaggerUi = require('swagger-ui-express');
 const swaggerFile = require("../swagger-output.json");
+const bodyParser = require('body-parser');
 
 /* TODO
     추가 api 
@@ -27,6 +28,9 @@ class App {
 
         this.middleware();
 
+        // body 받기
+        this.bodyParsing();
+
         // 라우팅
         this.getRouting();
 
@@ -35,11 +39,16 @@ class App {
 
         // // 에러처리
         this.errorHandler();
-
     }
 
     middleware() {
         this.app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerFile));
+    }
+    
+    bodyParsing() {
+        this.app.use(bodyParser.json());
+        this.app.use(bodyParser.urlencoded({ extended: true }));
+        
     }
 
     getRouting() {
