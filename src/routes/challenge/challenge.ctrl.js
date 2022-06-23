@@ -42,6 +42,7 @@ exports.put_join = (req,res) => {
         #swagger.tags = ['challenge']
         #swagger.description = '챌린지 인증을 추가하는 API입니다. 매개변수 title을 입력하여, 챌린지를 참여할 수 있습니다.'
         #swagger.parameters['title'] = { description: 'test' }
+        #swagger.parameters['body'] = { description: 'test' }
     */
     console.log(req.body)
     // update challenge count and image list

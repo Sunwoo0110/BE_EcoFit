@@ -64,6 +64,15 @@
               "type": "string"
             },
             "description": "test"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object"
+            },
+            "description": "test"
           }
         ],
         "responses": {
@@ -161,7 +170,7 @@
         "tags": [
           "Market"
         ],
-        "description": "",
+        "description": "마켓의 상품을 추가하기 위한 API",
         "parameters": [
           {
             "name": "name",
@@ -170,7 +179,7 @@
             "schema": {
               "type": "string"
             },
-            "description": "습관을 검색하기 위해 필요한 PK"
+            "description": "상품 검색을 위해 필요한 PK"
           },
           {
             "name": "price",
@@ -178,7 +187,8 @@
             "required": true,
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "가격"
           },
           {
             "name": "explanation",
@@ -186,12 +196,29 @@
             "required": true,
             "schema": {
               "type": "string"
-            }
+            },
+            "description": "상품설명"
           },
           {
             "name": "hashtag",
             "in": "path",
             "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "hashTag",
+            "description": "hashTag",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "image",
+            "description": "imge파일",
+            "in": "query",
             "schema": {
               "type": "string"
             }
@@ -207,7 +234,7 @@
     "/user/": {
       "get": {
         "tags": [
-          "User"
+          "user"
         ],
         "description": "임시",
         "parameters": [],
