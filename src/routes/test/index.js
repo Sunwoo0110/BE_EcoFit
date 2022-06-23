@@ -4,7 +4,6 @@ const router = require('express').Router();
 
 const db = require('../db');
 
-
 router.get('/', (req, res) => {
     db.query('SELECT * from test', (error, rows) => {
         if (error) {

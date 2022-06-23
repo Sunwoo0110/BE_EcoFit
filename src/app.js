@@ -1,8 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 
-
-
 class App {
     constructor() {
         this.app = express();
@@ -33,7 +31,7 @@ class App {
 
     errorHandler() {
         this.app.use((err, req, res, _) => {
-          res.status(500).json("error","500");
+            res.status(500).json("error","500");
         });
     }
 
