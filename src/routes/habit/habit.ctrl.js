@@ -3,7 +3,7 @@ const { Router } = require("express");
 const router = Router();
 
 exports.get_root = async (req,res) => {
-    db.query('SELECT * from habit', (error, rows) => {
+    db.query('SELECT * from Habit', (error, rows) => {
         if (error) {
             throw error;
         }
@@ -14,7 +14,7 @@ exports.get_root = async (req,res) => {
 
 // add user habit
 exports.get_add_title = async (req,res) => {
-    db.query(`INSERT INTO Habit(title, id, point, count) VALUES ("${req.params.title}", "해커톤", 0, 0)`, (error, rows) => {
+    db.query(`INSERT INTO Habit(title, id, point, count) VALUES ("${req.params.title}", "해커톤", 0)`, (error, rows) => {
         if (error) {
             res.send("fail");
             throw error;
