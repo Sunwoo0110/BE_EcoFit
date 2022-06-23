@@ -76,7 +76,7 @@
     "/habit/": {
       "get": {
         "tags": [
-          "habit"
+          "Habit"
         ],
         "description": "습관을 조회하는 기초 API, 테스트용도",
         "parameters": [],
@@ -90,7 +90,7 @@
     "/habit/add/{title}": {
       "put": {
         "tags": [
-          "habit"
+          "Habit"
         ],
         "description": "습관을 추가해주는 API입니다. 매개변수 title을 입력하여, 습관을 추가할수 있습니다.",
         "parameters": [
@@ -101,7 +101,7 @@
             "schema": {
               "type": "string"
             },
-            "description": "test"
+            "description": "습관을 추가하기 위해 필요한 PK"
           }
         ],
         "responses": {
@@ -114,9 +114,9 @@
     "/habit/click/{title}": {
       "put": {
         "tags": [
-          "habit"
+          "Habit"
         ],
-        "description": "습관을 클릭하면, count를 올려주는 API",
+        "description": "습관을 클릭하면, count를 올려주는 API, 클릭할때마다 1씩 증가",
         "parameters": [
           {
             "name": "title",
@@ -125,7 +125,7 @@
             "schema": {
               "type": "string"
             },
-            "description": "클릭할때마다 1씩 증가"
+            "description": "습관을 검색하기 위해 필요한 PK"
           }
         ],
         "responses": {
@@ -138,10 +138,65 @@
     "/market/": {
       "get": {
         "tags": [
-          "market"
+          "Market"
         ],
-        "description": "market 임시",
+        "description": "마켓의 상품들을 검색하는 API",
         "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/market/data/image": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      }
+    },
+    "/market/add/{name}/{price}/{explanation}/{hashtag}": {
+      "post": {
+        "tags": [
+          "Market"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "습관을 검색하기 위해 필요한 PK"
+          },
+          {
+            "name": "price",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "explanation",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "hashtag",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
