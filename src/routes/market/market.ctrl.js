@@ -9,6 +9,7 @@ exports.get_market = (req, res) => {
     */
     db.query('SELECT * from Market', (error, rows) => {
         if (error) {
+            res.send("fail");
             throw error;
         }
         console.log(rows);
@@ -30,10 +31,11 @@ exports.post_add_market = (req, res) => {
         `INSERT INTO Market (name, price, explanation, hashTag, image) VALUES ("${req.body.name}", ${req.body.price}, "${req.body.explanation}", "${req.body.hashtag}", "${req.file.path}");`, 
             (error, rows) => {
         if (error) {
+            res.send("fail");
             throw error;
         }
         console.log(rows);
-        res.send(rows);
+        res.send("success");
     })
 }   
 
