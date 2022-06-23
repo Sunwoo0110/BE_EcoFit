@@ -1,7 +1,6 @@
 const express = require("express");
 const swaggerUi = require('swagger-ui-express');
 const swaggerFile = require("../swagger-output.json");
-const bodyParser = require('body-parser');
 
 /* TODO
     url에 api 붙이기
@@ -47,11 +46,8 @@ class App {
     }
     
     bodyParsing() {
-        // var multer = require('multer');
-        // var forms = multer();
         this.app.use(express.json());
         this.app.use(express.urlencoded({ extended: true }));
-        // this.app.use(forms.array());
     }
 
     getRouting() {

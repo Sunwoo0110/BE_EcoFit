@@ -1,7 +1,5 @@
 /* Challenge APIs Router Controller */
-
 const db = require("../db");
-const router = require("express").Router();
 
 exports.get_root = (req,res) => {
     /*
@@ -42,11 +40,8 @@ exports.put_join = (req,res) => {
         #swagger.tags = ['challenge']
         #swagger.description = '챌린지 인증을 추가하는 API입니다. 매개변수 title을 입력하여, 챌린지를 참여할 수 있습니다.'
         #swagger.parameters['title'] = { description: 'test' }
-        #swagger.parameters['body'] = { description: 'test' }
     */
-    console.log(req.body)
-    // update challenge count and image list
-    db.query(`UPDATE Challenge SET count = count + 1, image = JSON_ARRAY_APPEND(image, '$', "${req.body.image}") WHERE title = "${req.params.title}"`, (error, rows) => {
+    db.query(`UPDATE Challenge SET count = count + 1, image = JSON_ARRAY_APPEND(image, '$', "${req.file.path}") WHERE title = "${req.params.title}"`, (error, rows) => {
         if (error) {
             res.send("fail");
             throw error;

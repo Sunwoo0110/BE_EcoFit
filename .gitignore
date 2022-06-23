@@ -145,6 +145,7 @@ dist
 .DS_Store
 
 src/routes/market/uploads
+src/routes/challenge/uploads
 temp/
 
 # End of https://www.toptal.com/developers/gitignore/api/node
