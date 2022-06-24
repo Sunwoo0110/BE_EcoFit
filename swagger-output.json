@@ -165,7 +165,34 @@
         ],
         "description": "임시로 그림 불러오는 API",
         "parameters": [],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/market/tag/{tag}": {
+      "get": {
+        "tags": [
+          "Market"
+        ],
+        "description": "tag별 마켓 상품 검색 API",
+        "parameters": [
+          {
+            "name": "tag",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       }
     },
     "/market/add": {

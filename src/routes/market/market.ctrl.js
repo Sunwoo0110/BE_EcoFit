@@ -12,7 +12,23 @@ exports.get_market = (req, res) => {
             throw error;
         }
         console.log(rows);
-        res.send(rows);
+        res.json({markets:rows});
+        // res.send(rows);
+    })
+}
+
+exports.get_tag_market = (req, res) => {
+    /*
+        #swagger.tags = ['Market']
+        #swagger.description = 'tag별 마켓 상품 검색 API'
+    */
+   db.query(`SELECT * from Market where hashTag="${req.params.tag}"`, (error, rows) => {
+        if (error) {
+            res.send("fail");
+            throw error;
+        }
+        console.log(rows);
+        res.json({markets:rows});
     })
 }
 

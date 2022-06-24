@@ -6,7 +6,7 @@ const storage = multer.diskStorage({
     destination: (req,file,cb) => {
         cb(null, __dirname+'/uploads/');
     }, // 이미지 업로드 경로
-    filename: (req,file,cb) => {
+    filename: (req, file,cb) => {
         cb(null , file.originalname);
     }
 })
@@ -28,6 +28,7 @@ const upload = multer({ storage: storage})
 // Get
 router.get("/", ctrl.get_market);
 router.get('/data/image', ctrl.get_img_market);
+router.get('/tag/:tag', ctrl.get_tag_market);
 
 //post
 router.post("/add", upload.single('img'), ctrl.post_add_market);

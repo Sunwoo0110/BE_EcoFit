@@ -13,7 +13,7 @@ exports.get_habit = (req,res) => {
             throw error;
         }
         console.log(rows);
-        res.send(rows);
+        res.json({habit:rows});
     });
 };
 
@@ -61,7 +61,7 @@ exports.put_click_title = (req, res) => {
         if (rows.changedRows == 0) {
             res.send("Wrong title");
         } else {
-            db.query(`SELECT count, point from Habit WHERE title = "${req.params.title}"`, (error, rows) => {res.send(rows)} );
+            db.query(`SELECT count, point from Habit WHERE title = "${req.params.title}"`, (error, rows) => {res.json({habit:rows})} );
         }
         console.log(rows);
     });
