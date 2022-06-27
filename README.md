@@ -35,7 +35,7 @@
   - Challenge API 이미지 전송 파트 구현
   - Market API 구현
   - swagger 문서 구현
-- 김선우 ( 성균관대학교 )
+- 김선우 (성균관대학교)
   - 데이터 베이스 개념적 설계 & 논리적 설계
   - User API 구현
   - Habit APi 구현
@@ -113,7 +113,7 @@
 <td>
   Naver Cloud (대회운영측 제공)
 <br>
-  <strong>vCPU 4 Rem 8<strong>
+  <strong>vCPU 4 RAM 8<strong>
 </td>
 </tr>
  <tr>
