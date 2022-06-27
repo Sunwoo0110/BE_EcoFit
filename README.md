@@ -7,8 +7,26 @@
 - 기후 위기에 모두가 관심을 갖고 행동할 수 있는 시민 의식을 제고합니다.
 - 기존 챌린지 어플과 달리 환경보호에 초점을 맞췄습니다.
 
-
 [Presentation Slides](https://drive.google.com/file/d/19aQZixMDa-gGTCC0TOfD8PeZLG_41U7a/view?usp=sharing) / [Demo Video](https://www.youtube.com/watch?v=m8oeYZGmA88)
+
+
+<br>
+
+## ⚙️ 시현방법
+```bash
+ git clone https://github.com/D8tori/BE_EcoFit.git
+```
+### 해당 위치로 이동
+```bash
+ npm i or npm install
+```
+.env파일 작성 (database)
+
+### 시작하기
+```bash
+ npm start
+```
+<br>
 
 ## 👨‍💻 백엔드 측 개발 참여자 및 역활
 - 박민건 (동서대학교)
@@ -168,20 +186,3 @@
 ### 2. Hardware requirement
 - Ubuntu 22.04 LTS ( 박민건 )
 - Window 10 ( 김선우 )
-
-<br>
-
-## ⚙️ 시현방법
-```bash
- git clone https://github.com/D8tori/BE_EcoFit.git
-```
-### 해당 위치로 이동
-```bash
- npm i or npm install
-```
-.env파일 작성 (database)
-
-### 시작하기
-```bash
- npm start
-```
