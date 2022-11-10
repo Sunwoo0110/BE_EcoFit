@@ -12,7 +12,7 @@
 
 <br>
 
-## ⚙️ 시현방법
+## ⚙️ 시연방법
 ```bash
  git clone https://github.com/D8tori/BE_EcoFit.git
 ```
